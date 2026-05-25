@@ -4,14 +4,16 @@
 Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver using a coarse-to-fine parameter search. A scan over preliminary parameter values was used to determine regions of convergence/divergence and relative convergence speeds. A minimum is obtained, and a finer scan around the minimum was conducted to determine optimal parameters with higher accuracy. Two iterative scans were conducted, but the program supports an arbitrary amount as one desires. Optimal parameters were found to be $(\omega_1 = 3.4026, \omega_2=0.5859)$, and these were compared visually with the theoretical optimal parameters. A full scan over the range $0 \leq \omega_1,\omega_2 \leq 4$ is also conducted to determine what convergence looks like for alternating over-relaxed, or alternating under-relaxed parameters. A full analysis can be found at XXXXX
 
 ## Results
-
+# Parameter Scans:
 <img src="plots/Omega_Space_Graph_Iteration_1.png" width="100%">
 
 <img src="plots/Omega_Space_Graph_Iteration_2.png" width="49%"> <img src="plots/Omega_Space_Graph_Iteration_3.png" width="49%">
 
-![SRJ Iterations to Convergence Full Plot Scan](plots/Omega_Space_Graph_FullScan_.png) 
+# Full SRJ Parameter Scan:
 
-![Jacobi & SRJ Residuals vs. Iterations (k)](plots/SRJ_Jacobi_Residuals.png) 
+<img aligh="center" src="plots/Omega_Space_Graph_FullScan_.png" width="75%">
+
+
 $$
 \nabla^2 u= u_{xx}+u_{yy}=0
 $$
