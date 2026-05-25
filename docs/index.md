@@ -1,5 +1,7 @@
+<html>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es6/tex-mml-chtml.js"></script>
+</html>
 
 # Analysis of Jacobi Iterative Methods for Solving the Laplace Equation 
 ### By Abbas Faisal
