@@ -140,20 +140,20 @@ Solver methods are written for MATLAB Mex conversion and utilize practices that 
 
 # Results
 
-![SRJ Iterations to Convergence Plot Scan 1](plots/Omega_Space_Graph_Iteration_1.png) 
-![SRJ Iterations to Convergence Plot Scan 2](plots/Omega_Space_Graph_Iteration_2.png) 
-![SRJ Iterations to Convergence Plot Scan 3](plots/Omega_Space_Graph_Iteration_3.png) 
+![SRJ Iterations to Convergence Plot Scan 1](../plots/Omega_Space_Graph_Iteration_1.png) 
+![SRJ Iterations to Convergence Plot Scan 2](../plots/Omega_Space_Graph_Iteration_2.png) 
+![SRJ Iterations to Convergence Plot Scan 3](../plots/Omega_Space_Graph_Iteration_3.png) 
 The parameter search produced clear visualizations of which omega combinations are convergent and which are divergent. There is a convergent region which tapers off asymmetrically (around $\omega_=0.5$) to a vertex with a minimum number of iterations at $(3.36,0.58)$.
 
 Convergence speeds display a clear gradient. There is a local maximum at (1,0), and iteration counts decrease as $\omega_1$ and $\omega_2$ increase. The number of iterations appears to decrease to a minimum as the parameter pair approaches the vertex. The standard Jacobi method at (1,1) converges with 45266 iterations, higher compared to the optimal SRJ parameter combination. Higher resolution scans around the minimum vertex reveal more about the boundary between the fastest convergent region and the divergent region. The scans show that there is a somewhat gradual gradient towards higher iterations as $\omega_2$ decreases out of the convergent region. The scans show a sudden change from low iteration convergent to divergent as $\omega_2$ increases out of the convergent region. The calculated value of the optimal SRJ parameters after Scan 3 is (3.4026,0.5859).
 
-![Jacobi & SRJ Residuals vs. Iterations (k)](plots/SRJ_Jacobi_Residuals.png) 
+![Jacobi & SRJ Residuals vs. Iterations (k)](../plots/SRJ_Jacobi_Residuals.png) 
 The Jacobi Method, SRJ method with optimized coefficients, and the SRJ method with theoretical optimal coefficients all converged. The optimized SRJ method converged the fastest. The theoretical optimal SRJ method converged second fastest, initially underperforming relative to the other two methods, and then overcoming the Jacobi method. The Jacobi method performed the slowest, with residuals slowly decaying. All residuals demonstrate an exponential decay as shown by the semilog plot. However, the Optimized SRJ method decays slightly slower as its residual approaches $10^-4$.
 
-![SRJ Iterations to Convergence Full Plot Scan](plots/Omega_Space_Graph_FullScan_.png) 
+![SRJ Iterations to Convergence Full Plot Scan](../plots/Omega_Space_Graph_FullScan_.png) 
 The full parameter range scan reveals a convergence graph symmetric around $\omega_1=\omega_2$. The original sharp blue convergence region is mirrored for the case where $\omega_2$ is over-relaxed, and $\omega_1$ is under-relaxed. The region where both parameters are over-relaxed is divergent, while the region where both parameters are under-relaxed shows convergence, but at significantly higher iterations. Certain parameter pairs with very low under-relaxed values will fully diverge.
 
-![SRJ Iterations to Convergence Jacobi Parameter Zoom](plots/Omega_Space_Graph_Jacobizoom_.png) 
+![SRJ Iterations to Convergence Jacobi Parameter Zoom](../plots/Omega_Space_Graph_Jacobizoom_.png) 
 The fine search around the original Jacobi parameters at (1,1) reveals a fast convergent region averaging ~2.3E4 to the bottom left of the point (1,1). The Jacobi parameters lie on the boundary between convergent and divergent behavior.
 
 # Discussion
