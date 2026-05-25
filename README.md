@@ -110,11 +110,11 @@ The literature states that $\omega_1=3.414213$, and $\omega_2=0.585786$ are the 
 ### First Search (Scan #1) Conducted on $\Omega_1^1 \times \Omega_2^1$ 
 
 $$
-\Omega_1^1 = \\{a\Delta \omega^1 \mid a \in \mathbb{N}, a\Delta \omega^1 \in [1,4]\\} 
+\Omega_1^1 = \left\\{a\Delta \omega^1 \mid a \in \mathbb{N}, a\Delta \omega^1 \in [1,4]\right\\} 
 $$
 
 $$
-\Omega_2^1 = \\{b\Delta \omega^1 \mid b \in \mathbb{N}, b\Delta \omega^1 \in [0,1]\\} 
+\Omega_2^1 = \left\\{b\Delta \omega^1 \mid b \in \mathbb{N}, b\Delta \omega^1 \in [0,1]\right\\} 
 $$
 
 Searching this will yield $\omega_1^1$ and $\omega_2^1$. These will be used to search at later denser grids. For arbitrary iteration number $d$, the following grids are searched:
@@ -122,12 +122,12 @@ Searching this will yield $\omega_1^1$ and $\omega_2^1$. These will be used to s
 ### Arbitrary Search (Scan #d) conducted on $\Omega_1^d \times \Omega_2^d$ 
 
 $$
-\Omega_1^d = \\{a\Delta \omega^d \mid a \in \mathbb{N},a\Delta \omega^d \in
-[\omega_1^{d-1}-10W\Delta\omega^d,\omega_1^{d-1}+10W\Delta\omega^d]\\} $$
+\Omega_1^d = \left\\{a\Delta \omega^d \mid a \in \mathbb{N},a\Delta \omega^d \in
+[\omega_1^{d-1}-10W\Delta\omega^d,\omega_1^{d-1}+10W\Delta\omega^d]\right\\} $$
 
 $$
-\Omega_2^d = \\{b\Delta \omega^d \mid b \in \mathbb{N}, b\Delta \omega^d \in
-[\omega_2^{d-1}-10W\Delta\omega^d,\omega_2^{d-1}+10W\Delta\omega^d]\\} 
+\Omega_2^d = \left\\{b\Delta \omega^d \mid b \in \mathbb{N}, b\Delta \omega^d \in
+[\omega_2^{d-1}-10W\Delta\omega^d,\omega_2^{d-1}+10W\Delta\omega^d]\right\\} 
 $$
 
 Here, $W$ represents the window size, and superscripts notate the scan number. Residuals are checked at varying frequencies depending on scan number to ensure faster convergence.
