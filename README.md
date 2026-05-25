@@ -28,6 +28,7 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver for th
 
 ## Problem Statement:
 The Laplace Equation will be solved for the given boundary conditions.
+
 $$
 \nabla^2 u= u_{xx}+u_{yy}=0
 $$
