@@ -1,5 +1,5 @@
 # Analysis of Jacobi Iterative Methods for Solving the Laplace Equation 
-# By Abbas Faisal
+### By Abbas Faisal
 
 ## Introduction
 The Point Jacobi method is an elementary approach to solving the Laplace Equation. It is, however, known to be inefficient and utilizes multiple iterations to converge. This is primarily due to the behavior of the spectral radius of the iteration matrix, which is large and close in magnitude to 1. The Scheduled Relaxation Jacobi (SRJ) method attempts to incorporate an over-relaxation factor $\omega_1$ and an under-relaxation factor $\omega_2$ to alter the spectral radius of the method. These factors are used in alternating iterations and have the effect of reducing the spectral radius of the iteration matrix, resulting in faster convergence. This study aims to characterize the convergence behavior of the SRJ method across a parameter space. An iterative search method will then be utilized to determine the optimal parameter values for Laplace's Equation at higher accuracy, and characterize the convergence regions around the optimal parameter values. Risks associated with the SRJ method will then be evaluated.
