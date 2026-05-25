@@ -78,7 +78,7 @@ $$
 This approximation has error $O(\Delta x,\Delta y)$. We implement the Point Jacobi method using a $100 \times 100$ mesh. This means $N_x=N_y=100$ with $\Delta x = \Delta y = (2\pi)/100$. This can be implemented with the following finite difference equation:
 
 $$
-u_{i,j}^{k+1}=\frac{1}{4}\left[u_{i+1,j}^{k}+u_{i-i,j}^{k}+u_{i,j+1}^{k}+u_{i,j-1}^{k}\right] $$
+u_{i,j}^{k+1}=\frac{1}{4}\left(u_{i+1,j}^{k}+u_{i-i,j}^{k}+u_{i,j+1}^{k}+u_{i,j-1}^{k}\right) $$
 
 This will be 'time-marched' until convergence is reached. Convergence over the grid will be tracked using the following residual: 
 
@@ -96,13 +96,13 @@ This can be represented by the following condition:
 ### If k is even:
 
 $$
-u_{i,j}^{k+1}=(\omega_1-1)u_{i,j}^{k}+\omega_1\left[\frac{u_{i+1,j}^{k}+u_{i-i,j}^{k}+u_{i,j+1}^{k}+u_{i,j-1}^{k}}{4}\right] 
+u_{i,j}^{k+1}=(\omega_1-1)u_{i,j}^{k}+\omega_1\left(\frac{u_{i+1,j}^{k}+u_{i-i,j}^{k}+u_{i,j+1}^{k}+u_{i,j-1}^{k}}{4}\right) 
 $$
 
 ### If k is odd:
 
 $$
-u_{i,j}^{k+1}=(\omega_2-1)u_{i,j}^{k}+\omega_2\left[\frac{u_{i+1,j}^{k}+u_{i-i,j}^{k}+u_{i,j+1}^{k}+u_{i,j-1}^{k}}{4}\right] 
+u_{i,j}^{k+1}=(\omega_2-1)u_{i,j}^{k}+\omega_2\left(\frac{u_{i+1,j}^{k}+u_{i-i,j}^{k}+u_{i,j+1}^{k}+u_{i,j-1}^{k}}{4}\right) 
 $$
 
 The literature states that $\omega_1=3.414213$, and $\omega_2=0.585786$ are the optimal parameters to reach convergence the fastest. We seek to characterize the convergence behavior over a range of parameter values to gain more information on how parameter choices can affect convergence speed. We will loop between varying combinations of both values of omega such that $0 \le \omega_2 \le 1$, and $1 \leq \omega_1 \leq 4$. We will evaluate the convergence speed at parameter spacings of $\Delta \omega = 0.01$. This is a broad, but semi-coarse search to gauge convergence regions of the parameter space. An ideal value of $\omega_1$ and $\omega_2$ will then be found by determining the minimum convergence parameters in the data. A finer search will be conducted around this value by creating a window of appropriate width around the minimal parameters and searching with a smaller spacing $\Delta \omega=0.001$. This scan is reiteratively conducted until an ideal accuracy of $(\omega_1,\omega_2)$ is obtained.
