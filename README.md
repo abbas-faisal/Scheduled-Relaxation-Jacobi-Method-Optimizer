@@ -138,11 +138,11 @@ Searching this will yield $\omega_1^1$ and $\omega_2^1$. These will be used to s
 
 $$
 \Omega_1^d = \left\\{a\Delta \omega^d \mid a \in \mathbb{N},a\Delta \omega^d \in
-[\omega_1^{d-1}-10W\Delta\omega^d,\omega_1^{d-1}+10W\Delta\omega^d]\right\\} $$
+[\omega_1^{d-1}-W\Delta\omega^d,\omega_1^{d-1}+W\Delta\omega^d]\right\\} $$
 
 $$
 \Omega_2^d = \left\\{b\Delta \omega^d \mid b \in \mathbb{N}, b\Delta \omega^d \in
-[\omega_2^{d-1}-10W\Delta\omega^d,\omega_2^{d-1}+10W\Delta\omega^d]\right\\} 
+[\omega_2^{d-1}-W\Delta\omega^d,\omega_2^{d-1}+W\Delta\omega^d]\right\\} 
 $$
 
 Here, $W$ represents the window size, and superscripts notate the scan number. Residuals are checked at varying frequencies depending on scan number to ensure faster convergence.
