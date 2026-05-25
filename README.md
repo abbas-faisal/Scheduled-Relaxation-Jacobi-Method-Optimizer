@@ -1,12 +1,18 @@
 # Analysis of Jacobi Iterative Methods for Solving the Laplace Equation 
-### By Abbas Faisal
 
-## Introduction
-The Point Jacobi method is an elementary approach to solving the Laplace Equation. It is, however, known to be inefficient and utilizes multiple iterations to converge. This is primarily due to the behavior of the spectral radius of the iteration matrix, which is large and close in magnitude to 1. The Scheduled Relaxation Jacobi (SRJ) method attempts to incorporate an over-relaxation factor $\omega_1$ and an under-relaxation factor $\omega_2$ to alter the spectral radius of the method. These factors are used in alternating iterations and have the effect of reducing the spectral radius of the iteration matrix, resulting in faster convergence. This study aims to characterize the convergence behavior of the SRJ method across a parameter space. An iterative search method will then be utilized to determine the optimal parameter values for Laplace's Equation at higher accuracy, and characterize the convergence regions around the optimal parameter values. Risks associated with the SRJ method will then be evaluated.
+## Summary
+Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver using a coarse-to-fine parameter search. A scan over preliminary parameter values was used to determine regions of convergence/divergence and relative convergence speeds. A minimum is obtained, and a finer scan around the minimum was conducted to determine optimal parameters with higher accuracy. Two iterative scans were conducted, but the program supports an arbitrary amount as one desires. Optimal parameters were found to be $(\omega_1 = 3.4026, \omega_2=0.5859)$, and these were compared visually with the theoretical optimal parameters. A full scan over the range $0 \leq \omega_1,\omega_2 \leq 4$ is also conducted to determine what convergence looks like for alternating over-relaxed, or alternating under-relaxed parameters. A full analysis can be found at XXXXX
 
-## Problem Statement:
-We aim to solve the Laplace Equation on a $2\pi \times 2\pi$ grid, with a sample boundary condition applied on the bottom edge. The conditions are shown below for the domain $\mathcal{D}=[0:2\pi] \times [0:2\pi]$ 
+## Results
 
+![SRJ Iterations to Convergence Plot Scan 1](plots/Omega_Space_Graph_Iteration_1.png)
+
+<img src="plots/Omega_Space_Graph_Iteration_2.png" height="300">
+<img src="plots/Omega_Space_Graph_Iteration_3.png" height="300">
+
+![SRJ Iterations to Convergence Full Plot Scan](plots/Omega_Space_Graph_FullScan_.png) 
+
+![Jacobi & SRJ Residuals vs. Iterations (k)](plots/SRJ_Jacobi_Residuals.png) 
 $$
 \nabla^2 u= u_{xx}+u_{yy}=0
 $$
