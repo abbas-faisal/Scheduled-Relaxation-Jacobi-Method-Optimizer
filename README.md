@@ -10,7 +10,7 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver for th
 <img src="plots/Omega_Space_Graph_Iteration_2.png" width="49%"> <img src="plots/Omega_Space_Graph_Iteration_3.png" width="49%">
 
 * Clear visualization of convergent sharp tongue as over-relaxation increases. Further scans show sharp gradients from minimum convergent regions to divergent regions
-* Optimal parameter values calculated up to 4 decimal places with percent error $0.22%$ for $\omega_1$, and $0.001%$ for $\omega_2$. (attributable to the choice of boundary condition)
+* Optimal parameter values calculated up to 4 decimal places with percent error $0.22\%$ for $\omega_1$, and $0.001\%$ for $\omega_2$. (attributable to the choice of boundary condition)
 
 ### Full SRJ Parameter Scan:
 <img src="plots/Omega_Space_Graph_FullScan_.png" width="75%">
