@@ -5,10 +5,10 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver using 
 
 ## Results
 
-![SRJ Iterations to Convergence Plot Scan 1](plots/Omega_Space_Graph_Iteration_1.png)
+<img align="center" src="plots/Omega_Space_Graph_Iteration_1.png" height="300">
 
-<img align="left" src="plots/Omega_Space_Graph_Iteration_2.png" height="300">
-<img align="right" src="plots/Omega_Space_Graph_Iteration_3.png" height="300">
+<img align="left" src="plots/Omega_Space_Graph_Iteration_2.png" height="400">
+<img align="right" src="plots/Omega_Space_Graph_Iteration_3.png" height="400">
 
 ![SRJ Iterations to Convergence Full Plot Scan](plots/Omega_Space_Graph_FullScan_.png) 
 
