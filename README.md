@@ -27,6 +27,7 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver for th
 * Suggests that there is merit in search algorithms for ideal parameters, as performance is highly dependent on the boundary conditions of the problem.
 
 ## Problem Statement:
+The Laplace Equation will be solved for the given boundary conditions.
 $$
 \nabla^2 u= u_{xx}+u_{yy}=0
 $$
