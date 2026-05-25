@@ -22,6 +22,7 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver for th
 
 ### Residuals vs. Iterations Analysis:
 <img src="plots/SRJ_Jacobi_Residuals.png" width="75%">
+
 * Figures show that residuals decay exponentially, and that the search algorithm provided parameters that performed better than the theoretical ones.
 * Suggests that there is merit in search algorithms for ideal parameters, as performance is highly dependent on the boundary conditions of the problem.
 
