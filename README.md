@@ -10,9 +10,9 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver using 
 <img src="plots/Omega_Space_Graph_Iteration_2.png" width="49%"> <img src="plots/Omega_Space_Graph_Iteration_3.png" width="49%">
 
 # Full SRJ Parameter Scan:
-
-<img aligh="center" src="plots/Omega_Space_Graph_FullScan_.png" width="75%">
-
+<center>
+<img src="plots/Omega_Space_Graph_FullScan_.png" width="75%">
+</center>
 
 $$
 \nabla^2 u= u_{xx}+u_{yy}=0
