@@ -17,8 +17,8 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver for th
 <img src="plots/Omega_Space_Graph_FullScan_.png" width="75%">
 
 * Full convergence spectrum for all combinations of under-relaxed, over-relaxed parameters is visualized for $0 \leq \omega_1,\omega_2 \leq 4$.
-* Clear indication that the iteration number graph has level curves defined by $\omega_1+\omega_2=C$ for some C. Convergence is characterized by the sum of parameters.
-* Scans further validate that alternating between an over-relaxation parameter, and an under-relaxation parameter, is the best way to improve convergence speeds given the Point Jacobi Method.
+* Uniform color gradients indicate that the iteration number graph has level curves defined by $\omega_1+\omega_2=C$ for some C. Convergence speed can be characterized by the sum of parameters.
+* Scans further validate that alternating between an over-relaxation parameter and an under-relaxation parameter is the only way to significantly improve convergence speeds given the Point Jacobi Method.
 
 ### Residuals vs. Iterations Analysis:
 <img src="plots/SRJ_Jacobi_Residuals.png" width="75%">
