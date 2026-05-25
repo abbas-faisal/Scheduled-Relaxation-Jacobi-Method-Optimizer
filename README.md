@@ -111,6 +111,13 @@ The convergence criteria $r^k \leq 10^-5$ will be used. To speed up the search a
 ## Scheduled Relaxation Jacobi (SRJ) Method Implementation and Optimization 
 The second method we will implement is the Scheduled Relaxation Jacobi (SRJ) Method. The Jacobi method is used to first calculate an intermediate value. Then, a weighted average is taken with the old value using a relaxation parameter $\omega$. For $\omega<1$, low-frequency errors are reduced, but high-frequency errors are introduced. For $\omega>1$, those high-frequency errors are dampened. The SRJ method aims to obtain the benefits of both methods by alternating at each iteration. Therefore:
 
+
+$$
+u_{i,j}^{k+1} = \begin{cases} 
+(\omega_1-1)u_{i,j}^{k} + \omega_1 \left( \frac{u_{i+1,j}^{k} + u_{i-1,j}^{k} + u_{i,j+1}^{k} + u_{i,j-1}^{k}}{4} \right) & \text{if } k \text{ is even} \\
+(\omega_2-1)u_{i,j}^{k} + \omega_2 \left( \frac{u_{i+1,j}^{k} + u_{i-1,j}^{k} + u_{i,j+1}^{k} + u_{i,j-1}^{k}}{4} \right) & \text{if } k \text{ is odd} 
+\end{cases}
+$$
 ### If k is even:
 
 $$
