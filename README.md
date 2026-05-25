@@ -11,7 +11,7 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver using 
 
 # Full SRJ Parameter Scan:
 
-<img aligh="center" src="plots/Omega_Space_Graph_FullScan_.png" width="75%">
+<img aligh="center" src="plots/Omega_Space_Graph_FullScan_.png" width="50%">
 
 
 $$
