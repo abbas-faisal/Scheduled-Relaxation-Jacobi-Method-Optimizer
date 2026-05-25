@@ -33,11 +33,11 @@ The grid will be discretized into a $N_x \times N_y$ mesh with $\Delta x = (2\pi
 In our MATLAB implementation, the grid will be represented by a $(N_x+2) \times (N_y+2)$ array, where the first and last rows/columns encode boundary conditions. This geometry requires that the x and y axes range from $-dx$ to $Lx+dx$, and $-dy$ to $Ly+dy$, respectively. We represent an index space and grid space as follows:
 
 $$
-\mathcal{I}=\\{(i,j)\mid 1 \leq i \leq N_x+2,1\leq j \leq N_y+2\\}
+\mathcal{I}=\left\\{(i,j)\mid 1 \leq i \leq N_x+2,1\leq j \leq N_y+2\right\\}
 $$
 
 $$
-\mathcal{D}_g=\\{((i-1)\Delta x,(j-1)\Delta y)|(i,j)\in\mathcal{I}\\} 
+\mathcal{D}_g=\left\\{((i-1)\Delta x,(j-1)\Delta y)|(i,j)\in\mathcal{I}\right\\} 
 $$
 
 Based on these assumptions, boundary values and interior points may be related using the following conditions: 
