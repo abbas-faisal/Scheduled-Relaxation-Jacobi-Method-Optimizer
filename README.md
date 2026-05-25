@@ -13,7 +13,9 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver for th
 * Optimal parameter values calculated up to 4 decimal places with percent error $0.22\%$ for $\omega_1$, and $0.001\%$ for $\omega_2$. (attributable to the choice of boundary condition)
 
 ### Full SRJ Parameter Scan:
+
 <img src="plots/Omega_Space_Graph_FullScan_.png" width="75%">
+
 * Full convergence spectrum for all combinations of under-relaxed, over-relaxed parameters is visualized for $0 \leq \omega_1,\omega_2 \leq 4$.
 * Clear indication that the iteration number graph has level curves defined by $\omega_1+\omega_2=C$ for some C. Convergence is characterized by the sum of parameters.
 * Scans further validate that alternating between an over-relaxation parameter, and an under-relaxation parameter, is the best way to improve convergence speeds given the Point Jacobi Method.
@@ -21,7 +23,7 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver for th
 ### Residuals vs. Iterations Analysis:
 <img src="plots/SRJ_Jacobi_Residuals.png" width="75%">
 * Figures show that residuals decay exponentially, and that the search algorithm provided parameters that performed better than the theoretical ones.
-* Suggests that there is merit in search algorithms for ideal parameters, as performance is highly dependent on the boundary condition of the problem.
+* Suggests that there is merit in search algorithms for ideal parameters, as performance is highly dependent on the boundary conditions of the problem.
 
 ## Problem Statement:
 $$
