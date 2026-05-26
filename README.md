@@ -95,7 +95,7 @@ $$
 \frac{u_{i,j+1}-2_{i,j}+u_{i,j-1}}{\Delta y^2}=0
 $$
 
-This approximation has error $O(\Delta x,\Delta y)$. We implement the Point Jacobi method using a $100 \times 100$ mesh. Thus $N_x=N_y=100$ with $\Delta x = \Delta y = (2\pi)/100$. This can be implemented with the following finite difference equation:
+This approximation has error $O(\Delta x^2,\Delta y^2)$. We implement the Point Jacobi method using a $100 \times 100$ mesh. Thus $N_x=N_y=100$ with $\Delta x = \Delta y = (2\pi)/100$. This can be implemented with the following finite difference equation:
 
 $$
 u_{i,j}^{k+1}=\frac{1}{4}\left(u_{i+1,j}^{k}+u_{i-i,j}^{k}+u_{i,j+1}^{k}+u_{i,j-1}^{k}\right) $$
