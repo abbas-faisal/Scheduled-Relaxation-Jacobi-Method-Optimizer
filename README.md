@@ -17,7 +17,7 @@ Developed and optimized a Scheduled Relaxation Jacobi (SRJ) method solver for th
 <img src="plots/Omega_Space_Graph_FullScan_.png" width="75%">
 
 * Full convergence spectrum for all combinations of under-relaxed, over-relaxed parameters is visualized for $0 \leq \omega_1,\omega_2 \leq 4$.
-* Uniform color gradients indicate that the iteration number graph has level curves defined by $\omega_1+\omega_2=C$ for some C. Convergence speed can be characterized by the sum of parameters.
+* Uniform color gradients indicate that the iteration number graph has level curves defined by $\omega_1+\omega_2=A$ for $A>0$. Convergence speed can be characterized by the sum of parameters.
 * Scans further validate that alternating between an over-relaxation parameter and an under-relaxation parameter is the only way to significantly improve convergence speeds given the Point Jacobi Method.
 
 ### Residuals vs. Iterations Analysis:
@@ -162,7 +162,7 @@ The full parameter range scan reveals a beautiful symmetric plot, where the shar
 
 Clearly, one can choose $\omega_2$ to be an over-relaxation parameter, and $\omega_1$ to be an under-relaxation parameter if they wish. The same convergence implications can be deduced. The plots show that, for a two-parameter setup, the _only_ parameters that have iteration minimizing properties are ones where one parameter over-relaxes, and one parameter under-relaxes. A combination of over-relaxing parameters leads to divergence, while a combination of under-relaxing parameters, while leading to convergence, still demonstrates high iteration counts.
 
-Moreover, they still underperform the standard Jacobi method. The plot reveals a key insight: for $0 \leq \omega_1,\omega_2 \leq 2$, the iteration number graph appears to have level curves defined by $\omega_1+\omega_2=A$ for $A>0$. In essence, for particular parameter choices, the iteration count is entirely characterized by the value of C. More analytical work has to be done to determine if this is truly the case for all parameter choices, and why.
+Moreover, they still underperform the standard Jacobi method. The plot reveals a key insight: for $0 \leq \omega_1,\omega_2 \leq 2$, the iteration number graph appears to have level curves defined by $\omega_1+\omega_2=A$ for $A>0$. In essence, for particular parameter choices, the iteration count is entirely characterized by the value of $A$. More analytical work has to be done to determine if this is truly the case for all parameter choices, and why.
 
 The zoom around the Jacobi plot reveals something interesting. The choice of $(1,1)$ is placed right at the boundary between convergent and divergent methods in the omega space. This is something that is not immediately obvious. If the user opted for an Overrelaxed Jacobi method, even marginally with a relaxation factor of $\omega=0.95$, they would immediately receive convergence in half of the iterations that Jacobi requires. This is a very powerful result, and suggests that any type of under-relaxation method is beneficial for the application of the Jacobi Method.
 
