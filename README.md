@@ -106,7 +106,7 @@ $$
 r^k = \sum_{(i,j) \in\mathcal{I}} \left|\frac{u_{i+1,j}-2_{i,j}+u_{i-1,j}}{\Delta x^2} + \frac{u_{i,j+1}-2_{i,j}+u_{i,j-1}}{\Delta y^2}\right| 
 $$
 
-The convergence criteria $r^k \leq 10^-5$ will be used. To speed up the search algorithm utilized, the residual will only be checked at certain iteration frequencies.
+The convergence criteria $r^k \leq 10^{-5}$ will be used. To speed up the search algorithm utilized, the residual will only be checked at certain iteration frequencies.
 
 ## Scheduled Relaxation Jacobi (SRJ) Method Implementation and Optimization 
 The second method we will implement is the Scheduled Relaxation Jacobi (SRJ) Method. The Jacobi method is used to first calculate an intermediate value. Then, a weighted average is taken with the old value using a relaxation parameter $\omega$. For $\omega<1$, low-frequency errors are reduced, but high-frequency errors are introduced. For $\omega>1$, those high-frequency errors are dampened. The SRJ method aims to obtain the benefits of both methods by alternating at each iteration. This can be defined as shown:
