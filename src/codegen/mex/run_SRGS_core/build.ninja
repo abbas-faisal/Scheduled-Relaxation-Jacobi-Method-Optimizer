@@ -1,0 +1,53 @@
+# CompilerName=mingw64
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/win64
+matlabdir = C:/Program Files/MATLAB/R2023b
+startdir = C:/Users/themc/Documents/GitHub/Scheduled-Relaxation-Jacobi-Method-Optimizer/src
+
+# Toolchain information
+cc = C:\ProgramData\MATLAB\SupportPackages\R2023b\3P.instrset\mingw_w64.instrset\bin\gcc
+cxx = C:\ProgramData\MATLAB\SupportPackages\R2023b\3P.instrset\mingw_w64.instrset\bin\g++
+linker = C:\ProgramData\MATLAB\SupportPackages\R2023b\3P.instrset\mingw_w64.instrset\bin\gcc
+linkerxx = C:\ProgramData\MATLAB\SupportPackages\R2023b\3P.instrset\mingw_w64.instrset\bin\g++
+
+cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "C:\Users\themc\Documents\GitHub\Scheduled-Relaxation-Jacobi-Method-Optimizer\src\codegen\mex\run_SRGS_core" -I "C:\Users\themc\Documents\GitHub\Scheduled-Relaxation-Jacobi-Method-Optimizer\src" -I "C:\Users\themc\Documents\GitHub\Scheduled-Relaxation-Jacobi-Method-Optimizer\src\codegen\mex\run_SRGS_core\interface" -I "C:\Program Files\MATLAB\R2023b\extern\include" -I "." -DMODEL=run_SRGS_core_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 
+
+cxxflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "C:\Users\themc\Documents\GitHub\Scheduled-Relaxation-Jacobi-Method-Optimizer\src\codegen\mex\run_SRGS_core" -I "C:\Users\themc\Documents\GitHub\Scheduled-Relaxation-Jacobi-Method-Optimizer\src" -I "C:\Users\themc\Documents\GitHub\Scheduled-Relaxation-Jacobi-Method-Optimizer\src\codegen\mex\run_SRGS_core\interface" -I "C:\Program Files\MATLAB\R2023b\extern\include" -I "." -DMODEL=run_SRGS_core_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 
+
+ldflags =  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2023b\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -o "run_SRGS_core_mex.mexw64" -llibemlrt -llibcovrt -llibut -llibmwmathutil  run_SRGS_core_mex.def
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker @$out.rsp $linkobjs $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldflags
+
+# Build
+build $builddir/run_SRGS_core_data.o : cc $root/run_SRGS_core_data.c
+build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
+build $builddir/run_SRGS_core_initialize.o : cc $root/run_SRGS_core_initialize.c
+build $builddir/run_SRGS_core_terminate.o : cc $root/run_SRGS_core_terminate.c
+build $builddir/run_SRGS_core.o : cc $root/run_SRGS_core.c
+build $builddir/_coder_run_SRGS_core_api.o : cc $root/interface/_coder_run_SRGS_core_api.c
+build $builddir/_coder_run_SRGS_core_mex.o : cc $root/interface/_coder_run_SRGS_core_mex.c
+build $builddir/run_SRGS_core_emxutil.o : cc $root/run_SRGS_core_emxutil.c
+build $builddir/_coder_run_SRGS_core_info.o : cc $root/interface/_coder_run_SRGS_core_info.c
+build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
+
+# Link
+build $root\run_SRGS_core_mex.mexw64 : link $builddir/run_SRGS_core_data.o $builddir/rt_nonfinite.o $builddir/run_SRGS_core_initialize.o $builddir/run_SRGS_core_terminate.o $builddir/run_SRGS_core.o $builddir/_coder_run_SRGS_core_api.o $builddir/_coder_run_SRGS_core_mex.o $builddir/run_SRGS_core_emxutil.o $builddir/_coder_run_SRGS_core_info.o $builddir/c_mexapi_version.o 

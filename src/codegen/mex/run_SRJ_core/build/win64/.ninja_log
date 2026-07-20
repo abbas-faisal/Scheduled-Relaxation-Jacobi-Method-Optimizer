@@ -1,0 +1,12 @@
+# ninja log v5
+22	508	8062704321861263	build/win64/rt_nonfinite.o	e0d2d8dbe8c1e9c7
+37	520	8062704321866229	build/win64/c_mexapi_version.o	db3541431a877357
+14	539	8062704321942705	build/win64/_coder_run_SRJ_core_info.o	6658799f9b8638a4
+47	583	8062704322559808	build/win64/run_SRJ_core_terminate.o	40477a61c2d4ee0f
+1	595	8062704322625614	build/win64/run_SRJ_core_data.o	5313ba331f8c8fac
+84	609	8062704322830914	build/win64/run_SRJ_core_initialize.o	77f80156df3c5e5c
+73	619	8062704322967929	build/win64/_coder_run_SRJ_core_mex.o	84cbaed23a5f3ebf
+29	638	8062704323147735	build/win64/_coder_run_SRJ_core_api.o	27e6d59ad1403eca
+64	642	8062704323152686	build/win64/run_SRJ_core_emxutil.o	318cd4cec602b4bb
+55	767	8062704324382554	build/win64/run_SRJ_core.o	d484b495b9dce8ee
+769	1204	8062704328700498	run_SRJ_core_mex.mexw64	f0e57630c4a4b9c8
