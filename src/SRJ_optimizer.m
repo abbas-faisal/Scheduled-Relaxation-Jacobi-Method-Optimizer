@@ -39,17 +39,17 @@ best_w1=0;
 best_w2=0;
 
 %scan parameters:
-resolution=1; %determines number of scans taken to narrow in on optimal omega
+resolution=3; %determines number of scans taken to narrow in on optimal omega
 window_scale_factor = 100; %width/height of scan search equals this times d_omega
 d_omega=0.01; %spacing in parameter space search
 
 
 %min/max omega for a dedicated SRJ search
-%omega_1_min = 1.0;
-%omega_1_max = 4.0;
-%omega_2_min = 0.0;
-%omega_2_max = 1.0;
-%adjusttag = ''; 
+omega_1_min = 1.0;
+omega_1_max = 4.0;
+omega_2_min = 0.0;
+omega_2_max = 1.0;
+adjusttag = ''; 
 
 %min/max omega used for full parameter scan
 %omega_1_min = 0;
@@ -59,12 +59,12 @@ d_omega=0.01; %spacing in parameter space search
 %adjusttag = 'fullplot'; %tag to adjust filename for broad scan
 
 %min/max omega used for scan around jacobi omega values
-omega_1_min = 0.95;
-omega_1_max = 1.05;
-omega_2_min = 0.95;
-omega_2_max = 1.05;
-d_omega=0.001;
-adjusttag = 'jacobizoom'; %tag to adjust filename for jacobi zoom scan
+%omega_1_min = 0.95;
+%omega_1_max = 1.05;
+%omega_2_min = 0.95;
+%omega_2_max = 1.05;
+%d_omega=0.001;
+%adjusttag = 'jacobizoom'; %tag to adjust filename for jacobi zoom scan
 
 %find iterations and residual history for theoretical best omega
 [best_iters_theory, res_history_theory] = run_SRJ_core_mex(omega_1_theory, omega_2_theory, ...
